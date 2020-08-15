@@ -1,0 +1,44 @@
+body{
+   background-color: rgba(138, 73, 73, 0.5);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+input{
+    margin-bottom: 10px;
+    
+}
+input[type="text"]{
+    border: none;
+    border-bottom: 1px solid black;
+    background:none;
+    outline: none;
+    padding: 5px 3px;
+    width: 200px;
+    
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    width: 400px;
+    box-shadow: 1px 1px 30px 4px  black;
+    padding: 20px;
+    background-color: white;
+}

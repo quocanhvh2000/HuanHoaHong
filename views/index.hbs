@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WucAh</title>
+</head>
+
+<body>
+  <div class="addData">
+    <button id="btn">+</button>
+    <div class="form" id="form">
+      <form action="/add" method="POST">
+          <input type="text" name="txtName" placeholder="Name">
+          <input type="text" name="txtImage" placeholder="Image">
+          <input type="text" name="txtAmount" placeholder="Amount">
+          <input type="text" name="txtCost" placeholder="Cost">
+          <input type="submit" value="Add toy">
+      </form>
+    </div>
+  </div>
+   <div class="content">
+    <table>
+      <tr>
+        {{!-- <th>_id</th> --}}
+        {{!-- <th>ID</th> --}}
+        <th>Name</th>
+        <th>Image</th>
+        <th>Amount</th>
+        <th>Cost</th>
+        <th>Action</th>
+      </tr>
+      {{#each data}}
+      <tr>
+        {{!-- <td>{{_id}}</td> --}}
+        {{!-- <td>{{id}}</td> --}}
+        <td>{{Name}}</td>
+        <td class="image"><img src="{{Image}}" alt=""></td>
+        <td>{{Amount}}</td>
+        <td>{{Cost}} $</td>
+        <td><a href="/delete?id={{_id}}">Delete</a> <a href="/update?id={{_id}}">Update</a></td>
+        
+      </tr>
+      {{/each}}
+    </table>
+    
+  </div>
+</body>
+</html>
+<script>
+  var form = document.getElementById('form');
+  var btn = document.getElementById('btn');
+  console.log(btn);
+  btn.addEventListener("click",(e)=>{
+    var addData = document.querySelector(".addData");
+    var currenClass = addData.classList.value;
+    if(currenClass.indexOf("open")==-1)
+    {
+      btn.innerText = "x";
+      addData.classList.add("open");
+    }
+    else{
+      addData.classList.remove('open');
+      btn.innerText = "+";
+    }
+
+  })
+  
+</script>

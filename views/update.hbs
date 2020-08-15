@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Toys</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Update Toy</h1>
+        <form action="/doupdate" method="POST">
+            <input type="hidden" name="id" value="{{data._id}}">
+            <input type="text" placeholder="Name" name="txtName" value="{{data.Name}}">
+            <input type="text" placeholder="Image" name="txtImage" value="{{data.Image}}">
+            <input type="text" placeholder="Amount" name="txtAmount" value="{{data.Amount}}">
+            <input type="text" placeholder="Cost" name="txtCost" value="{{data.Cost}}">
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
