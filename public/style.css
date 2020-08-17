@@ -1,3 +1,12 @@
+
+body{
+  background-image: linear-gradient(to right top,rgba(26, 188, 156,0.6) ,rgba(142, 68, 173,0.6)), url("https://wallpaperaccess.com/full/1343405.jpg");;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center center;
+
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -9,6 +18,10 @@ table {
     text-align: left;
     padding: 8px;
     text-align: center;
+
+  }
+  th{
+    color: orange;
   }
  .form{
   position: absolute;
@@ -71,8 +84,33 @@ table {
   .image{
     width: 150px;
     height: 150px;
+    padding: 0;
   }
   td a{
     display: block;
     margin-bottom:10px;
+    text-decoration:none;
+    padding:3px 3px;
+    border:1px solid white;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+    color: red;
+    border-radius: 20px;
   }
+  td a:hover{
+    background-color: #f1c40f;
+    color: black;
+  }
+  td{
+    color: white;
+  }
+  .action{
+    /* display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+    width: 200px;
+    text-align: center;
+  }
+  

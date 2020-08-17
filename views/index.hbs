@@ -12,10 +12,10 @@
     <button id="btn">+</button>
     <div class="form" id="form">
       <form action="/add" method="POST">
-          <input type="text" name="txtName" placeholder="Name">
-          <input type="text" name="txtImage" placeholder="Image">
-          <input type="text" name="txtAmount" placeholder="Amount">
-          <input type="text" name="txtCost" placeholder="Cost">
+          <input type="text" name="txtName" placeholder="Name" required="text">
+          <input type="text" name="txtImage" placeholder="Image"  required="text">
+          <input type="text" name="txtAmount" placeholder="Amount" required="text">
+          <input type="text" name="txtCost" placeholder="Cost" required="text">
           <input type="submit" value="Add toy">
       </form>
     </div>
@@ -39,7 +39,7 @@
         <td class="image"><img src="{{Image}}" alt=""></td>
         <td>{{Amount}}</td>
         <td>{{Cost}} $</td>
-        <td><a href="/delete?id={{_id}}">Delete</a> <a href="/update?id={{_id}}">Update</a></td>
+        <td class="action"><a href="/delete?id={{_id}}">Delete</a> <a href="/update?id={{_id}}">Update</a></td>
         
       </tr>
       {{/each}}
